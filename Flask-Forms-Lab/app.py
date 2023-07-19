@@ -32,11 +32,9 @@ def friends():
 		facebook_friends=["Nahar","Yanai","Shiraz", "Sasha", "Naama", "Oded", "DanDan", "Benda"]
 		return render_template('home.html', my_friends = friends, no_friends = False)
 
-@app.route('/friend_exists',methods=['GET', 'POST'])
-name = input()
-def friends_exists():
-
-	return render_template('friends_exists.html')
+@app.route('/friends_exists/<string:name>',methods=['GET','POST'])
+def friends_exists_route(name):
+    return render_template('friends_exists.html', n = name)
 
 
 
