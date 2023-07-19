@@ -12,15 +12,21 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-  <li><a href="#">Loai</a></li>
+  <li><a href="#">Nahar</a></li>
+  <li><a href="#">Yanay</a></li>
+  <li><a href="#">Shiraz</a></li>
+  <li><a href="#">Oded</a></li>
+  <li><a href="#">DanDan</a></li>
+  <li><a href="#">Benda</a></li>
+  <li><a href="#">Naama</a></li>
+  <li><a href="#">Nelson</a></li>
 </ul>
+            {% if no_friends == True %}
+                <p> I have no Friends :'(</p>
+            {% else %}
+                <p> I have Friends!my Friends are: </p>
+            {% endif %}
+            <h2> Friends: </h2>
 
 <script>
 function myFunction() {
