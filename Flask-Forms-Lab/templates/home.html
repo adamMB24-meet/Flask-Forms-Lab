@@ -11,22 +11,13 @@
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
-<ul id="myUL">
-  <li><a href="http://127.0.0.1:5000/home/Nahar">Nahar</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Yanay">Yanay</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Shiraz">Shiraz</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Oded">Oded</a></li>
-  <li><a href="http://127.0.0.1:5000/home/DanDan">DanDan</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Benda">Benda</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Naama">Naama</a></li>
-  <li><a href="http://127.0.0.1:5000/home/Nelson">Nelson</a></li>
-</ul>
-            {% if no_friends == True %}
-                <p> I have no Friends :'(</p>
-            {% else %}
-                <p> I have Friends!my Friends are: </p>
-            {% endif %}
-            <h2> Friends: </h2>
+            <h1> Hello Friends!</h1>
+            <p> My Friends are: </p>
+            <h2> facebook_friends: </h2>
+            <ul>
+                {% for facebook_friends in facebook_friends %}
+                <li> {{facebook_friends}} </li>
+                {% endfor %}
 
 <script>
 function myFunction() {

@@ -10,7 +10,7 @@ app = Flask(  # Create a flask app
 #----------------------------------------------------------------------------------------
 username = "adamrmb07"
 password = "123"
-
+facebook_friends=["Nahar","Yanai","Shiraz", "Sasha", "Naama", "Oded", "DanDan", "Benda"]
 
 
 @app.route('/', methods=['GET', 'POST'])  # '/' for the default pageFouad
@@ -30,7 +30,7 @@ def home():
 
 def friends():
 		facebook_friends=["Nahar","Yanai","Shiraz", "Sasha", "Naama", "Oded", "DanDan", "Benda"]
-		return render_template('home.html', my_friends = friends, no_friends = False)
+		return render_template('home.html', facebook_friends = facebook_friends)
 
 @app.route('/friends_exists/<string:name>',methods=['GET','POST'])
 def friends_exists_route(name):
